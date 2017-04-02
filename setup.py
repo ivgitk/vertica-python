@@ -14,7 +14,7 @@ setup(
     description='A native Python client for the Vertica database.',
     author='Justin Berka, Alex Kim',
     author_email='justin.berka@gmail.com, alex.kim@uber.com',
-    url='https://github.com/uber/vertica-python/',
+    url='https://github.com/ivgitk/vertica-python/',
     keywords="database vertica",
     packages=find_packages(),
     license="MIT",
