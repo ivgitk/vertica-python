@@ -108,6 +108,7 @@ class Connection(object):
         connection_timeout = self.options.get('connection_timeout')
         raw_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         raw_socket.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+        raw_socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         if connection_timeout is not None:
             raw_socket.settimeout(connection_timeout)
         raw_socket.connect((host, port))
